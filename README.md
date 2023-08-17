@@ -1,1 +1,3 @@
 # aulaAlgoritimos
+
+Here I'll save all the code from learning C#. First classes and all....
