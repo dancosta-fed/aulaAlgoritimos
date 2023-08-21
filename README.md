@@ -2,17 +2,16 @@
 
 Abaixo estão os exercícios utilizados neste código.
 
-### 01. Escreva um programa que leia o lado de um quadrado e imprima o seu perímetro, área e
-diagonal.
-Fórmulas:
-p = 4𝑙
-a = l^2
-d = &#8730;l
-Onde,
-: lado𝑙
-p: perímetro
-a: área
-d: diagonal
+### 01. Escreva um programa que leia o lado de um quadrado e imprima o seu perímetro, área e diagonal.
+Fórmulas:</br>
+p = 4𝑙 </br>
+a = l<sup>2</sup> </br>
+d = &#8730;l </br>
+Onde, </br>
+l: lado𝑙 </br>
+p: perímetro </br>
+a: área </br>
+d: diagonal </br>
 
 ### 02. Escreva um programa que leia a base e a altura de um retângulo e mostre o seu perímetro,
 área e diagonal.
