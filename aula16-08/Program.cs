@@ -6,20 +6,26 @@ internal class Program
     {
         Console.WriteLine("Lista de Exercícios ATP...");
 
-        //Console.WriteLine("Exercício 1: Lado de um Quadrado:");
-        //LadosDeUmQuadrado();
+        Console.WriteLine("Exercício 1: Lado de um Quadrado:");
+        LadosDeUmQuadrado();
 
-        //Console.WriteLine("Exercício 2: Base e altura de um Retângulo");
-        //BaseEAlturaDeRetangulo();
+        Console.WriteLine("Exercício 2: Base e altura de um Retângulo");
+        BaseEAlturaDeRetangulo();
 
-        //Console.WriteLine("Exercício 3: Numerador e Denominador");
-        //NumeradorEDenominador();
+        Console.WriteLine("Exercício 3: Numerador e Denominador");
+        NumeradorEDenominador();
 
-        //Console.WriteLine("Exercício 4: Converter °F para °C");
-        //FahrenheitParaCelsius();
+        Console.WriteLine("Exercício 4: Converter °F para °C");
+        FahrenheitParaCelsius();
 
         Console.WriteLine("Exercício 5: Quantidade de eleitores");
         QuantidadeDeEleitores();
+
+        Console.WriteLine("Exercício 6: Troca de Variáveis");
+        TrocaDeVariaveis();
+
+        Console.WriteLine("Exercício 7: Gastos no Restaurante");
+        GastosRestaurante();
 
         Console.ReadLine();
     }
@@ -109,5 +115,47 @@ internal class Program
             $"Podemos dizer que {percentualValidos}% dos votos foram válidos, {percentualNulos}% dos votos foram nulos" +
             $" e {percentualBrancos}% dos votos foram em branco.");
 
+    }
+
+    static void TrocaDeVariaveis()
+    {
+        double varA, varB, varC;
+
+        Console.WriteLine("Me diga um número Real");
+        varA = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Agora preciso de outro número Real");
+        varB = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine($"Seus números são A é igual a {varA} e B é igual a {varB}");
+        Console.WriteLine("Vamos mudar essa ordem...");
+
+        varC = varA;
+        varA = varB;
+        varB = varC;
+
+        Console.WriteLine($"Prontinho... agora A é igual a {varA} e B é igual a {varB}");
+
+
+    }
+
+    static void GastosRestaurante()
+    {
+        double valorConta, percentualGorgeta, valorFinal, gorgeta;
+
+        Console.WriteLine("Qual foi o valor da sua conta?");
+        valorConta = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Qual porcentagem você quer dar de gorgeta?");
+        percentualGorgeta = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Calculando o valor total a pagar...");
+
+        gorgeta = valorConta * (percentualGorgeta / 100);
+        valorFinal = valorConta + gorgeta;
+
+        Console.WriteLine($"Valor da gorgeta = R${gorgeta.ToString("N2")}");
+
+        Console.WriteLine($"O valor total a ser pago é de R${valorFinal.ToString("N2")}");
     }
 } 
