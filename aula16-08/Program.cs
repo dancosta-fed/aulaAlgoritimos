@@ -15,8 +15,11 @@ internal class Program
         //Console.WriteLine("Exercício 3: Numerador e Denominador");
         //NumeradorEDenominador();
 
-        Console.WriteLine("Exercício 4: Converter °F para °C");
-        FahrenheitParaCelsius();
+        //Console.WriteLine("Exercício 4: Converter °F para °C");
+        //FahrenheitParaCelsius();
+
+        Console.WriteLine("Exercício 5: Quantidade de eleitores");
+        QuantidadeDeEleitores();
 
         Console.ReadLine();
     }
@@ -79,5 +82,32 @@ internal class Program
         c = 5 * (f - 32) / 9;
 
         Console.WriteLine($"A temperatura {f} °F, é equivalente à {c.ToString("N1")} °C");
+    }
+
+    static void QuantidadeDeEleitores()
+    {
+        int qntEleitores;
+        double votosBrancos, votosNulos, votosValidos, percentualBrancos, percentualNulos, percentualValidos;
+
+        Console.WriteLine("Qual a quantidade de eleitores da cidade?");
+        qntEleitores = int.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Qual a quantidade de votos válidos?");
+        votosValidos = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Qual a quantidade de votos nulos?");
+        votosNulos = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Qual a quantidade de votos em branco?");
+        votosBrancos = double.Parse(Console.ReadLine()!);
+
+        percentualValidos = votosValidos / qntEleitores * 100;
+        percentualNulos = votosNulos / qntEleitores * 100;
+        percentualBrancos = votosBrancos / qntEleitores * 100;
+
+        Console.WriteLine($"Para uma população com {qntEleitores}, e as quantidades de votos obtidas. " +
+            $"Podemos dizer que {percentualValidos}% dos votos foram válidos, {percentualNulos}% dos votos foram nulos" +
+            $" e {percentualBrancos}% dos votos foram em branco.");
+
     }
 } 
