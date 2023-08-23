@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Lista de Exercícios ATP...");
+        //Console.WriteLine("Lista de Exercícios ATP...");
 
         //Console.WriteLine("Exercício 1: Lado de um Quadrado:");
         //LadosDeUmQuadrado();
@@ -18,8 +18,20 @@ internal class Program
         //Console.WriteLine("Exercício 4: Converter °F para °C");
         //FahrenheitParaCelsius();
 
-        Console.WriteLine("Exercício 5: Quantidade de eleitores");
-        QuantidadeDeEleitores();
+        //Console.WriteLine("Exercício 5: Quantidade de eleitores");
+        //QuantidadeDeEleitores();
+
+        //Console.WriteLine("Exercício 6: Troca de Variáveis");
+        //TrocaDeVariaveis();
+
+        //Console.WriteLine("Exercício 7: Gastos no Restaurante");
+        //GastosRestaurante();
+
+        //Console.WriteLine("Exercício 8: Inverter número");
+        //InverterNumero();
+
+        Console.WriteLine("Exercício 9: Valor do Killowat");
+        ValorKilowatt();
 
         Console.ReadLine();
     }
@@ -110,4 +122,93 @@ internal class Program
             $" e {percentualBrancos}% dos votos foram em branco.");
 
     }
-} 
+
+    static void TrocaDeVariaveis()
+    {
+        double varA, varB, varC;
+
+        Console.WriteLine("Me diga um número Real");
+        varA = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Agora preciso de outro número Real");
+        varB = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine($"Seus números são A é igual a {varA} e B é igual a {varB}");
+        Console.WriteLine("Vamos mudar essa ordem...");
+
+        varC = varA;
+        varA = varB;
+        varB = varC;
+
+        Console.WriteLine($"Prontinho... agora A é igual a {varA} e B é igual a {varB}");
+
+
+    }
+
+    static void GastosRestaurante()
+    {
+        double valorConta, percentualGorgeta, valorFinal, gorgeta;
+
+        Console.WriteLine("Qual foi o valor da sua conta?");
+        valorConta = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Qual porcentagem você quer dar de gorgeta?");
+        percentualGorgeta = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Calculando o valor total a pagar...");
+
+        gorgeta = valorConta * (percentualGorgeta / 100);
+        valorFinal = valorConta + gorgeta;
+
+        Console.WriteLine($"Valor da gorgeta = R${gorgeta.ToString("N2")}");
+
+        Console.WriteLine($"O valor total a ser pago é de R${valorFinal.ToString("N2")}");
+    }
+
+    static void InverterNumero()
+    {
+        int num, cent, dez, un, newNum;
+
+        Console.WriteLine("Diga um número com três dígitos.");
+        string userInput = Console.ReadLine()!;
+
+        if (userInput.Length != 3)
+        {
+            Console.WriteLine($"Seu número é {userInput}. Mas, o número precisa conter 3 digitos.");
+        } else
+        {
+            num = int.Parse(userInput);
+            Console.WriteLine($"Seu número é: {num}");
+
+            cent = num / 100;
+            dez = (num / 10) % 10;
+            un = num % 10;
+
+            newNum = 100 * un + 10 * dez + cent;
+
+            Console.WriteLine($"O novo número é: {newNum}");
+        }
+
+
+    }
+
+    static void ValorKilowatt()
+    {
+        double minimumWage, kilowatt, valorPorKilowatt, valorAPagar;
+
+        Console.WriteLine("Qual o valor do salário Mínimo?");
+        minimumWage = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Quanto kilowatt você gastou esse mês?");
+        kilowatt = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine($"kilowat: {kilowatt}");
+
+        valorPorKilowatt = (1.0 / 10) * minimumWage;
+
+        valorAPagar = valorPorKilowatt * kilowatt;
+
+        Console.WriteLine($"O valor em reais de cada kilowat é de: R${valorPorKilowatt}");
+        Console.WriteLine($"O valor total a pagar é de: R${valorAPagar}");
+    }
+}
