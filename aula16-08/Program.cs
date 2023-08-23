@@ -4,28 +4,31 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Lista de Exercícios ATP...");
+        //Console.WriteLine("Lista de Exercícios ATP...");
 
-        Console.WriteLine("Exercício 1: Lado de um Quadrado:");
-        LadosDeUmQuadrado();
+        //Console.WriteLine("Exercício 1: Lado de um Quadrado:");
+        //LadosDeUmQuadrado();
 
-        Console.WriteLine("Exercício 2: Base e altura de um Retângulo");
-        BaseEAlturaDeRetangulo();
+        //Console.WriteLine("Exercício 2: Base e altura de um Retângulo");
+        //BaseEAlturaDeRetangulo();
 
-        Console.WriteLine("Exercício 3: Numerador e Denominador");
-        NumeradorEDenominador();
+        //Console.WriteLine("Exercício 3: Numerador e Denominador");
+        //NumeradorEDenominador();
 
-        Console.WriteLine("Exercício 4: Converter °F para °C");
-        FahrenheitParaCelsius();
+        //Console.WriteLine("Exercício 4: Converter °F para °C");
+        //FahrenheitParaCelsius();
 
-        Console.WriteLine("Exercício 5: Quantidade de eleitores");
-        QuantidadeDeEleitores();
+        //Console.WriteLine("Exercício 5: Quantidade de eleitores");
+        //QuantidadeDeEleitores();
 
-        Console.WriteLine("Exercício 6: Troca de Variáveis");
-        TrocaDeVariaveis();
+        //Console.WriteLine("Exercício 6: Troca de Variáveis");
+        //TrocaDeVariaveis();
 
-        Console.WriteLine("Exercício 7: Gastos no Restaurante");
-        GastosRestaurante();
+        //Console.WriteLine("Exercício 7: Gastos no Restaurante");
+        //GastosRestaurante();
+
+        Console.WriteLine("Exercício 7: Inverter número");
+        InverterNumero();
 
         Console.ReadLine();
     }
@@ -158,4 +161,31 @@ internal class Program
 
         Console.WriteLine($"O valor total a ser pago é de R${valorFinal.ToString("N2")}");
     }
-} 
+
+    static void InverterNumero()
+    {
+        int num, cent, dez, un, newNum;
+
+        Console.WriteLine("Diga um número com três dígitos.");
+        string userInput = Console.ReadLine()!;
+
+        if (userInput.Length != 3)
+        {
+            Console.WriteLine($"Seu número é {userInput}. Mas, o número precisa conter 3 digitos.");
+        } else
+        {
+            num = int.Parse(userInput);
+            Console.WriteLine($"Seu número é: {num}");
+
+            cent = num / 100;
+            dez = (num / 10) % 10;
+            un = num % 10;
+
+            newNum = 100 * un + 10 * dez + cent;
+
+            Console.WriteLine($"O novo número é: {newNum}");
+        }
+
+
+    }
+}
