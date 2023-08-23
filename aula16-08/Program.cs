@@ -27,8 +27,11 @@ internal class Program
         //Console.WriteLine("Exercício 7: Gastos no Restaurante");
         //GastosRestaurante();
 
-        Console.WriteLine("Exercício 7: Inverter número");
-        InverterNumero();
+        //Console.WriteLine("Exercício 8: Inverter número");
+        //InverterNumero();
+
+        Console.WriteLine("Exercício 9: Valor do Killowat");
+        ValorKilowatt();
 
         Console.ReadLine();
     }
@@ -187,5 +190,25 @@ internal class Program
         }
 
 
+    }
+
+    static void ValorKilowatt()
+    {
+        double minimumWage, kilowatt, valorPorKilowatt, valorAPagar;
+
+        Console.WriteLine("Qual o valor do salário Mínimo?");
+        minimumWage = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine("Quanto kilowatt você gastou esse mês?");
+        kilowatt = double.Parse(Console.ReadLine()!);
+
+        Console.WriteLine($"kilowat: {kilowatt}");
+
+        valorPorKilowatt = (1.0 / 10) * minimumWage;
+
+        valorAPagar = valorPorKilowatt * kilowatt;
+
+        Console.WriteLine($"O valor em reais de cada kilowat é de: R${valorPorKilowatt}");
+        Console.WriteLine($"O valor total a pagar é de: R${valorAPagar}");
     }
 }
