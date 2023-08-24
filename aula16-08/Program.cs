@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //Console.WriteLine("Lista de Exercícios ATP...");
+        Console.WriteLine("Lista de Exercícios ATP...");
 
         //Console.WriteLine("Exercício 1: Lado de um Quadrado:");
         //LadosDeUmQuadrado();
@@ -18,8 +18,8 @@ internal class Program
         //Console.WriteLine("Exercício 4: Converter °F para °C");
         //FahrenheitParaCelsius();
 
-        //Console.WriteLine("Exercício 5: Quantidade de eleitores");
-        //QuantidadeDeEleitores();
+        Console.WriteLine("Exercício 5: Quantidade de eleitores");
+        QuantidadeDeEleitores();
 
         //Console.WriteLine("Exercício 6: Troca de Variáveis");
         //TrocaDeVariaveis();
@@ -30,8 +30,8 @@ internal class Program
         //Console.WriteLine("Exercício 8: Inverter número");
         //InverterNumero();
 
-        Console.WriteLine("Exercício 9: Valor do Killowat");
-        ValorKilowatt();
+        //Console.WriteLine("Exercício 9: Valor do Killowat");
+        //ValorKilowatt();
 
         Console.ReadLine();
     }
@@ -118,8 +118,8 @@ internal class Program
         percentualBrancos = votosBrancos / qntEleitores * 100;
 
         Console.WriteLine($"Para uma população com {qntEleitores}, e as quantidades de votos obtidas. " +
-            $"Podemos dizer que {percentualValidos}% dos votos foram válidos, {percentualNulos}% dos votos foram nulos" +
-            $" e {percentualBrancos}% dos votos foram em branco.");
+            $"Podemos dizer que {percentualValidos.ToString("N2")}% dos votos foram válidos, {percentualNulos.ToString("N2")}% dos votos foram nulos" +
+            $" e {percentualBrancos.ToString("N2")}% dos votos foram em branco.");
 
     }
 
